@@ -64,7 +64,7 @@ def _local_nlod(line1, line2):
 
     # result
     local_lod = L[M,M]
-    local_nlod = local_lod / sum([e[1] for e in X + Y])
+    local_nlod = local_lod / sum([e[1] for e in X + Y]) if local_lod != 0 else 0
     return local_nlod
 
 def _order_line(line):
